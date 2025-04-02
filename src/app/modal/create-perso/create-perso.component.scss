@@ -1,0 +1,112 @@
+/* General form styling */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Adds spacing between form elements */
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fefefe;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better aesthetics */
+}
+
+/* Styling for p-floatlabel inputs */
+p-floatlabel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+p-floatlabel input,
+p-floatlabel p-select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+p-floatlabel input:focus,
+p-floatlabel p-select:focus {
+  border-color: #007bff; /* Highlight border on focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add glow effect */
+  outline: none;
+}
+
+/* Button styling */
+p-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+p-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Headings */
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  text-align: center;
+  color: #555;
+  margin-top: 2rem;
+  font-size: 1.25rem;
+}
+
+/* List of characters */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 1rem auto;
+  max-width: 500px;
+  background-color: #fefefe;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+ul li {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #eee;
+  font-size: 1rem;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul li:last-child {
+  border-bottom: none; /* Remove border for the last item */
+}
+
+ul li:hover {
+  background-color: #f9f9f9; /* Highlight list item on hover */
+  cursor: pointer;
+}
+
+/* Add a subtle animation for list items */
+ul li {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+ul li:hover {
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}

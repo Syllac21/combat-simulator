@@ -1,0 +1,29 @@
+
+
+<h3>personnage</h3>
+<p-button (click)="openEditPersonnage()">Créer un nouveau personnage</p-button>
+
+<p-table [value]="characters" [tableStyle]="{ 'min-width': '50rem' }">
+  <ng-template #header>
+      <tr>
+        <th>Name</th>
+        <th>Classe</th>
+          <th>Santé</th>
+          <th>Attaque</th>
+          <th>Defense</th>
+          <th>Vitesse</th>
+          <th>Image</th>
+      </tr>
+  </ng-template>
+  <ng-template #body let-character>
+      <tr>
+        <td>{{ character.name }}</td>
+        <td>{{ character.class }}</td>
+        <td>{{ character.health }}</td>
+          <td>{{ character.attack }}</td>
+          <td>{{ character.defense }}</td>
+          <td>{{ character.speed }}</td>
+          <td>{{ character.imageUrl }}</td>
+      </tr>
+  </ng-template>
+</p-table>

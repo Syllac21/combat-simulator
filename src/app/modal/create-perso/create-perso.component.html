@@ -1,0 +1,96 @@
+<p>create-perso works!</p>
+
+
+<!-- <p-button (click)="showDialog()" icon="pi pi-user" label="Login" /> -->
+<!-- <p-dialog id="dialog" maskStyleClass="backdrop-blur-sm" [(visible)]="visible" styleClass="!border-0 !bg-transparent"> -->
+  <h2>Créer un nouveau personnage</h2>
+  <form class="form">
+    <p-floatlabel>
+      <input
+        pInputText
+        id="name"
+        [(ngModel)]="name"
+        [ngModelOptions]="{ standalone: true }"
+        autocomplete="off"
+      />
+      <label for="name">Nom</label>
+    </p-floatlabel>
+
+    <p-floatlabel>
+      <input
+      pInputText
+      id="health"
+      [(ngModel)]="health"
+      [ngModelOptions]="{ standalone: true }"
+      autocomplete="off"
+      />
+      <label for="health">health</label>
+    </p-floatlabel>
+
+    <p-floatlabel>
+      <input
+        pInputText
+        id="attack"
+        [(ngModel)]="attack"
+        [ngModelOptions]="{ standalone: true }"
+        autocomplete="off"
+      />
+      <label for="attack">Attaque</label>
+    </p-floatlabel>
+
+    <p-floatlabel>
+      <input
+        pInputText
+        id="defense"
+        [(ngModel)]="defense"
+        [ngModelOptions]="{ standalone: true }"
+        autocomplete="off"
+      />
+      <label for="defense">Défense</label>
+    </p-floatlabel>
+
+    <p-floatlabel>
+      <input
+        pInputText
+        id="speed"
+        [(ngModel)]="speed"
+        [ngModelOptions]="{ standalone: true }"
+        autocomplete="off"
+      />
+      <label for="speed">vitesse</label>
+    </p-floatlabel>
+
+    <p-floatlabel>
+      <input
+        pInputText
+        id="imageUrl"
+        [(ngModel)]="imageUrl"
+        [ngModelOptions]="{ standalone: true }"
+        autocomplete="off"
+      />
+      <label for="imageUrl">url de l'image</label>
+    </p-floatlabel>
+
+    <p-floatlabel>
+      <p-select
+        id="classe"
+        [options]="classes"
+        [(ngModel)]="selectedClasse"
+        [ngModelOptions]="{ standalone: true }"
+        optionLabel="name"
+        class="w-full md:w-56"
+      >
+        <ng-template #selectedItem let-selectedOption>
+          {{ selectedClasse }}
+        </ng-template>
+        <ng-template let-class #item>
+          {{ class }}
+        </ng-template></p-select
+      >
+      <label for="classe">Classe</label>
+    </p-floatlabel>
+
+    <p-button (click)="addCharacter()">Créer</p-button>
+    <p-button (click)="closeDialog()">annuler</p-button>
+  </form>
+<!-- </p-dialog> -->
