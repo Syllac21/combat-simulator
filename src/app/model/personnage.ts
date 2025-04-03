@@ -10,4 +10,6 @@ export interface Character {
   defense: number; // Valeur de défense
   speed: number; // Vitesse d’action
   imageUrl: string;
+
+  
 }

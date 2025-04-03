@@ -14,17 +14,32 @@ export class MenuComponent {
     {
       label: 'Accueil',
       icon: 'pi pi-home',
-      routerLink: ['/accueil'],
+      routerLink: ['/accueil']
+    },
+    {
+      label:'combat',
+      icon: 'pi pi-bell',
+      routerLink: ['/fight']
     },
     {
       label: 'Personnage',
       icon: 'pi pi-user',
-      routerLink: ['/personnage'],
+      routerLink: ['/personnage']
+    },
+    {
+      label: 'Paris',
+      icon: 'pi pi-euro',
+      routerLink: ['/bets']
+    },
+    {
+      label: 'historique',
+      icon : 'pi pi-euro',
+      routerLink: ['fights']
     },
     {
       label: 'Classement',
       icon: 'pi pi-trophy',
-      routerLink: ['/classement'],
+      routerLink: ['/classement']
     },
   ];
 }

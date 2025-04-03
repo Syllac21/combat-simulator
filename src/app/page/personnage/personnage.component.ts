@@ -10,7 +10,7 @@ import { CreatePersoComponent } from '../../modal/create-perso/create-perso.comp
 import { DialogService, DynamicDialogRef, DynamicDialogModule } from 'primeng/dynamicdialog';
 
 import { TableModule } from 'primeng/table';
-
+import { CharacterService } from '../../services/character/character.service';
 
 
 @Component({
@@ -28,7 +28,15 @@ import { TableModule } from 'primeng/table';
 export class PersonnageComponent {
   characters: Character[] = [];
   ref: DynamicDialogRef | undefined;
-  constructor(public dialogService: DialogService){};
+  constructor(
+    public dialogService: DialogService,
+    private characterService: CharacterService
+  ){
+    this.characterService.getCharacters().subscribe((data)=>{
+      this.characters = data;
+    })
+  };
+
   openEditPersonnage(){
     this.ref = this.dialogService.open(CreatePersoComponent,{
       header: 'creation d\'un perso',
@@ -37,9 +45,13 @@ export class PersonnageComponent {
     this.ref.onClose.subscribe((character: Character) => {
       if (character) {
          this.characters.push(character);
+         this.characterService.addCharacter(character);
       }
   });
-  }
+}
+rmCharacter(id:string){
+  this.characterService.removeCharacter(id);
+}
 
 
 

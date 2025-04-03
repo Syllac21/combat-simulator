@@ -1,0 +1,22 @@
+<h3>Historique des combats</h3>
+
+<p-table [value]="fights" [tableStyle]="{'min-width':'50rem'}">
+  <ng-template #header>
+    <tr>
+      <th>joueur 1</th>
+      <th>joueur 2</th>
+      <th>nombre de round</th>
+      <th>timeStamp</th>
+      <th>vainqueur</th>
+    </tr>
+  </ng-template>
+  <ng-template #body let-fight>
+    <tr>
+      <td>{{ fight.player1.name }} </td>
+      <td>{{fight.player2}} </td>
+      <td>??? </td>
+      <td>{{fight.timestamp}} </td>
+      <td>{{fight.winner}} </td>
+    </tr>
+  </ng-template>
+</p-table>

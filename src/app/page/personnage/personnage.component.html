@@ -13,6 +13,7 @@
           <th>Defense</th>
           <th>Vitesse</th>
           <th>Image</th>
+          <th>supprimer</th>
       </tr>
   </ng-template>
   <ng-template #body let-character>
@@ -24,6 +25,7 @@
           <td>{{ character.defense }}</td>
           <td>{{ character.speed }}</td>
           <td>{{ character.imageUrl }}</td>
+          <td><p-button (click)="rmCharacter(character.id)">Supp</p-button></td>
       </tr>
   </ng-template>
 </p-table>

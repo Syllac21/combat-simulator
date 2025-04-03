@@ -1,0 +1,25 @@
+
+
+<h3>bet</h3>
+
+
+<p-table [value]="bets" [tableStyle]="{ 'min-width': '50rem' }">
+  <ng-template #header>
+      <tr>
+        <th>Joueur</th>
+        <th>Mise</th>
+        <th>Perso</th>
+        <th>combat</th>
+
+      </tr>
+  </ng-template>
+  <ng-template #body let-bet>
+      <tr>
+        <td>{{ bet.userId }}</td>
+        <td>{{ bet.amount }}</td>
+        <td>{{ bet.character.id }}</td>
+          <td>{{ bet.fightId }}</td>
+
+      </tr>
+  </ng-template>
+</p-table>
