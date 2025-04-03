@@ -22,7 +22,7 @@ bets: Bet[] = [];
 ref: DynamicDialogRef | undefined;
 constructor(
   public dialogService: DialogService,
-  private betService: BetService
+  private betService: BetService,
 ){
   this.betService.getBet().subscribe((data)=>{
     this.bets = data;

@@ -29,7 +29,7 @@ export class MenuComponent {
     {
       label: 'Paris',
       icon: 'pi pi-euro',
-      routerLink: ['/bets']
+      routerLink: ['/paris']
     },
     {
       label: 'historique',

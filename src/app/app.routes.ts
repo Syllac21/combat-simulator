@@ -15,7 +15,7 @@ export const routes: Routes = [
   { path: 'select-character', component:SelectCharacterComponent},
   { path: 'fight', component:FightComponent},
   { path: 'fights', component:FightsComponent},
-  { path: 'bets', component:BetsComponent},
+  { path: 'paris', component:BetsComponent},
   { path: 'leaderBoard', component:LeaderBoardComponent},
   { path: 'profile', component:ProfileComponent},
   { path: 'classement', component:ClassementComponent},

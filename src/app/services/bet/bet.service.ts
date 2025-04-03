@@ -2,8 +2,7 @@ import { Injectable } from '@angular/core';
 import{
   Firestore,
   collection,
-  collectionData,
-  addDoc
+  collectionData
 } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { Bet } from '../../model/Bet';
@@ -13,15 +12,13 @@ import { Bet } from '../../model/Bet';
   providedIn: 'root'
 })
 export class BetService {
-  private betCollection;
+  private betsCollection;
 
   constructor(private firestore: Firestore) {
-    this.betCollection = collection(this.firestore,'bet');
+    this.betsCollection = collection(this.firestore,'bet');
    }
 
   getBet(): Observable<Bet[]>{
-    return collectionData(this.betCollection, {
-      idField: 'id',
-    }) as Observable<Bet[]>;
+    return collectionData(this.betsCollection, { idField: 'id' }) as Observable<Bet[]>;
   }
 }
